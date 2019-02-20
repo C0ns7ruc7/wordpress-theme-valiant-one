@@ -15,7 +15,7 @@ function load_stylesheets(){
         false, // version
         'all' // applied on
     );
-    wp_enqueue_style('bootstrap'); // add to que
+    wp_enqueue_style('bootstrap'); // add to the loading que
 
     wp_register_style(
         'stylesheet',
@@ -114,3 +114,23 @@ add_image_size(
  * recommended is to add the sizes before uploading any thumbnails and to not
  * change your mind afterwards.
  */
+
+/**
+ * 5.0
+ * create costume post types
+ */
+
+function create_posttype() {
+    register_post_type( 'acme_product',
+        array(
+            'labels' => array(
+                'name' => __( 'Products' ),
+                'singular_name' => __( 'Product' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'products'),
+        )
+    );
+}
+add_action( 'init', 'create_posttype' );
