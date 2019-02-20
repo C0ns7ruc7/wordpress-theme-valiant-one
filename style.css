@@ -9,3 +9,13 @@ License URI: none
 Tags: work-in-progress  // visit https://make.wordpress.org/themes/handbook/review/required/theme-tags/
 Text Domain: onceonatime
 */
+
+body {
+    background-color: #999;
+}
+
+header{
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100px;
+}
