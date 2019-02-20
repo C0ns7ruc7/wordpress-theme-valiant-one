@@ -65,13 +65,16 @@ add_action('wp_enqueue_scripts', 'loadjs');
 
 add_theme_support('menus'); // enables support for wordpress menu's
 
-register_nav_menus( // adds menu locations, need to be referenced elsewhere
-    array(
-        'top-menu' => __('Top Menu', 'theme'),
-        'footer-menu' => __('Footer Menu', 'theme'),
-    )
-);
-
+function register_theme_menus()
+{
+    register_nav_menus( // adds menu locations, need to be referenced elsewhere
+        array(
+            'top-menu' => __('Top Menu', 'theme'),
+            'footer-menu' => __('Footer Menu', 'theme'),
+        )
+    );
+}
+add_action( 'init', 'register_theme_menus' );
 /**
  * 4.0
  * Post thumbnails
