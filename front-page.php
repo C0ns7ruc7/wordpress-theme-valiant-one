@@ -1,11 +1,19 @@
-<?php get_header() ?>
+<?php get_header()
+/**
+ * this is the front page, it shows when going to the index.php of a theme
+ *
+ *
+ */
+?>
 
     <div class="container pt-5 pb-5">
-        <h1>You're on the site</h1>
-        <div class="row">
-            <div class="col">left</div>
-            <div class="col">right</div>
-        </div>
+        <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
+
+            <h1><?php the_title(); ?></h1>
+
+            <?php the_content(); ?>
+
+        <?php endwhile; endif; ?>
     </div>
 
 <?php get_footer() ?>
