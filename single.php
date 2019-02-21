@@ -1,3 +1,5 @@
+<!-- <single.php> -->
+
 <?php get_header()
 /**
  * shows when a single post is on focus for the browser

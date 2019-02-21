@@ -1,3 +1,5 @@
+<!-- <front-page.php> -->
+
 <?php get_header()
 /**
  * this is the front page, it shows when going to the index.php of a theme

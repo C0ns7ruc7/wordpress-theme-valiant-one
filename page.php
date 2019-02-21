@@ -1,3 +1,5 @@
+<!-- <page.php> -->
+
 <?php get_header()
 /**
  * shows when a single page is on focus for the browser

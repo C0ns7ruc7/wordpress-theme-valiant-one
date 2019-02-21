@@ -1,3 +1,5 @@
+<!-- <search.php> -->
+
 <?php get_header()
 /**
  * search view

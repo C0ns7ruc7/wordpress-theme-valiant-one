@@ -1,3 +1,5 @@
+<!-- <index.php> -->
+
 <?php get_header()
 /**
  * fallback for non-specified php files in wordpress

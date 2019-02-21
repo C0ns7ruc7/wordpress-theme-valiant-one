@@ -1,3 +1,5 @@
+<!-- <404.php> -->
+
 <?php get_header()
 /**
  * page for when you just can't find anything
