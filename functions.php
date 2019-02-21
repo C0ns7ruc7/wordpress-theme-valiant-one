@@ -187,7 +187,7 @@ function custom_post_type() {
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
-        'rewrite'               => array('slug' => 'post-types'),
+        'rewrite'               => array('slug' => 'custom-post-types'),
         'supports'              => array(
             'title',
             'editor',
@@ -196,9 +196,9 @@ function custom_post_type() {
             'excerpt',
             'comments'
         ),
-    ); // slug becomes the URL
+    ); // slug becomes the URL, don't forget that "-" should be used instead of "_"
 
     register_post_type( 'post_type_vbs', $args );
 
 }
-add_action( 'init', 'custom_post_type', 0 );
+add_action( 'init', 'custom_post_type', 0 ); // should be the same as the slug
