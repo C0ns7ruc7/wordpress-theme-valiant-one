@@ -1,6 +1,6 @@
 <?php wp_footer(); ?>
 
-<footer class="sticky-bottom">
+<footer class="footer">
     <div class="container">
         <?php
         wp_nav_menu(

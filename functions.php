@@ -202,3 +202,18 @@ function custom_post_type() {
 
 }
 add_action( 'init', 'custom_post_type', 0 ); // should be the same as the slug
+
+/**
+ * 5.1
+ * hook-in to the category archive page, adds
+ */
+
+function namespace_add_post_type_vbs( $query ) {
+    if( (is_category() || is_tag()) && $query->is_archive() && empty( $query->query_vars['suppress_filters'] ) ) {
+        $query->set( 'post_type', array(
+            'post', 'post_type_vbs'
+        ));
+    }
+    return $query;
+}
+add_filter( 'pre_get_posts', 'namespace_add_post_type_vbs' );
